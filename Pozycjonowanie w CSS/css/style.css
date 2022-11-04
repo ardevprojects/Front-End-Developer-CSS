@@ -1,0 +1,23 @@
+  div[class*="outer"] {
+      width: 400px;
+      height: 400px;
+      background: linear-gradient(#9bacb9, #a99fb8);
+      border: 10px #666360 solid;
+      position: relative;
+  }
+
+  div[class*="inner"] {
+      width: 50%;
+      height: 50%;
+      position: absolute;
+  }
+
+  div[class*="orange"] {
+      background-color: #ff912e;
+      bottom: 0;
+  }
+
+  div[class*="gray"] {
+      background-color: #e4e4e4;
+      right: 0;
+  }
