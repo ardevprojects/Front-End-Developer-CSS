@@ -9,31 +9,31 @@
 }
 
 .red {
-    background: darkred;
+    background-color: red;
 }
 
 .red:hover {
-    background-color: red;
+    background-color: rgb(255, 50, 50);
     width: 300px;
 }
 
 .green {
-    background-color: darkgreen;
+    background-color: green;
     transition-delay: 300ms;
 }
 
 .green:hover {
-    background-color: green;
+    background-color: rgb(0, 159, 0);
     height: 300px;
 }
 
 .blue {
-    background-color: darkblue;
+    background-color: blue;
     transition-property: ;
 }
 
 .blue:hover {
-    background-color: blue;
+    background-color: rgb(50, 50, 255);
     width: 300px;
     height: 300px;
 }
