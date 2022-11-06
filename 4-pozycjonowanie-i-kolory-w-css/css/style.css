@@ -1,0 +1,101 @@
+.container {
+    width: 50vw;
+    height: 50vw;
+    position: relative;
+}
+
+.square {
+    width: 33.33%;
+    height: 33.33%;
+    position: absolute;
+    display: flex;
+    align-items: center;
+}
+
+.ball {
+    width: 50%;
+    height: 50%;
+    border-radius: 50%;
+    margin: 0 auto;
+}
+
+#square-4,
+#square-5,
+#square-6 {
+    top: 33.33%;
+}
+
+#square-7,
+#square-8,
+#square-9 {
+    bottom: 0;
+}
+
+#square-1,
+#square-4,
+#square-7 {
+    left: 0;
+}
+
+#square-2,
+#square-5,
+#square-8 {
+    left: 33.33%;
+}
+
+#square-3,
+#square-6,
+#square-9 {
+    right: 0;
+}
+
+#square-1,
+#ball-5 {
+    background-color: red;
+}
+
+#square-2,
+#ball-6 {
+    background-color: blue;
+}
+
+#square-3,
+#ball-4 {
+    background-color: green;
+}
+
+#square-4,
+#ball-8 {
+    background-color: yellow;
+}
+
+#square-5,
+#ball-9 {
+    background-color: black;
+}
+
+#square-6,
+#ball-7 {
+    background-color: orange;
+}
+
+#square-7,
+#ball-3 {
+    background-color: blueviolet;
+}
+
+#square-8,
+#ball-2 {
+    background-color: gray;
+}
+
+#square-9,
+#ball-1 {
+    background-color: pink;
+}
+
+.ball:hover {
+    width: 51%;
+    height: 51%;
+    transition: 500ms;
+}
