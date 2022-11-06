@@ -1,0 +1,39 @@
+.square {
+    width: 150px;
+    height: 150px;
+    border-radius: 3px;
+    border: 2px solid rgba(254, 254, 254, 0.2);
+    margin: auto;
+    margin-bottom: 15px;
+    transition: background-color 500ms, width 1s, height 2s;
+}
+
+.red {
+    background: darkred;
+}
+
+.red:hover {
+    background-color: red;
+    width: 300px;
+}
+
+.green {
+    background-color: darkgreen;
+    transition-delay: 300ms;
+}
+
+.green:hover {
+    background-color: green;
+    height: 300px;
+}
+
+.blue {
+    background-color: darkblue;
+    transition-property: ;
+}
+
+.blue:hover {
+    background-color: blue;
+    width: 300px;
+    height: 300px;
+}
