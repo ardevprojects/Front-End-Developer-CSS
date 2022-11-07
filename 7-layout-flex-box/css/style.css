@@ -1,0 +1,72 @@
+* {
+    box-sizing: border-box;
+    text-align: center;
+    color: white;
+}
+
+header {
+    background-color: red;
+}
+
+footer {
+    background-color: blueviolet;
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+nav {
+    background-color: green;
+    width: 23%;
+}
+
+article {
+    background-color: blue;
+    width: 62%;
+}
+
+aside {
+    background-color: pink;
+    width: 15%;
+}
+
+header,
+footer,
+nav,
+article,
+aside {
+    padding: 20px;
+}
+
+@media (max-width: 992px) {
+    nav {
+        width: 100%;
+        order: 3;
+    }
+
+    article {
+        width: 85%;
+    }
+}
+
+@media (max-width: 768px) {
+
+    nav,
+    article,
+    aside {
+        width: 100%;
+    }
+
+    aside {
+        order: 3;
+    }
+}
+
+h1,
+h2,
+header,
+footer {
+    text-transform: uppercase;
+}
