@@ -77,11 +77,8 @@
     width: 180%;
     height: 180%;
     position: absolute;
-        background: radial-gradient(
-          /* black, */
-          transparent,
-          rgba(132, 94, 61, 0.6)
-        );   /* background-color: rgba(132, 94, 61, 0.3); */
+    background: radial-gradient(transparent,
+            rgba(132, 94, 61, 0.6));
     opacity: 0;
     animation: countdown 0.0417s step-end infinite;
 }
@@ -107,7 +104,6 @@
     10% {
         content: "8";
         transform: rotate(36deg);
-        scale(0.5)
     }
 
     20% {
@@ -139,14 +135,11 @@
     70% {
         content: "2";
         transform: rotate(252deg);
-
     }
 
     80% {
         content: "1";
-
         transform: rotate(288deg);
-
     }
 
     90% {
