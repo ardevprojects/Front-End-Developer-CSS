@@ -32,371 +32,131 @@
     width: 2px;
     height: 180%;
     position: absolute;
-    background-color: rgba(42, 42, 42, 0.4);
-    transform: rotate(-0deg);
-    animation: countdown 100s step-end infinite;
-
+    background-color: rgba(116, 116, 116, 0.4);
+    animation: countdown 10s step-end infinite;
 }
 
-.circle-1 {
-    width: 56.25%;
+.hand-gradient {
+    width: 180%;
+    height: 180%;
+    position: absolute;
+    background: conic-gradient(from -0deg, white, transparent);
+    animation: countdown 1s step-end infinite;
+}
+
+.circle-small {
+    width: 75%;
     height: 75%;
     border-radius: 50%;
     position: absolute;
     border: 0.6vw solid rgba(255, 255, 255, 0.4);
 }
 
-.circle-2 {
+.circle-big {
     width: 67.5%;
     height: 90%;
     border-radius: 50%;
     position: absolute;
     border: 0.6vw solid rgba(255, 255, 255, 0.4);
+    display: flex;
+    overflow: hidden;
+    align-items: center;
+    justify-content: center;
+}
+
+.scratches-2 {
+    opacity: 0;
+}
+
+.scratches-3 {
+    opacity: 0;
+    animation: countdown 0.3s step-end infinite;
+}
+
+.frame-roll {
+    width: 180%;
+    height: 180%;
+    position: absolute;
+        background: radial-gradient(
+          /* black, */
+          transparent,
+          rgba(132, 94, 61, 0.6)
+        );   /* background-color: rgba(132, 94, 61, 0.3); */
+    opacity: 0;
+    animation: countdown 0.0417s step-end infinite;
 }
 
 .numbers {
     position: absolute;
     font-size: 20vh;
     color: white;
+    text-shadow: 0px 0px 3px rgb(120, 120, 120);
 }
 
 .numbers::before {
     content: "";
-    animation: countdown 100s step-end infinite;
+    animation: countdown 10s step-end infinite;
 }
 
 @keyframes countdown {
-    0.001% {
-        content: "10";
-        transform: rotate(-0deg);
-    }
-
-    0.125% {
-        transform: rotate(22.5deg);
-    }
-
-    0.25% {
-        transform: rotate(45deg);
-    }
-
-    0.375% {
-        transform: rotate(67.5deg);
-    }
-
-    0.5% {
-        transform: rotate(90deg);
-    }
-
-    0.625% {
-        transform: rotate(-67.5deg);
-    }
-
-    0.75% {
-        transform: rotate(-45deg);
-    }
-
-    0.875% {
-        transform: rotate(-22.5deg);
-    }
-
-    1% {
+    0% {
         content: "9";
         transform: rotate(-0deg);
     }
 
-    1.125% {
-        transform: rotate(22.5deg);
-    }
-
-    1.25% {
-        transform: rotate(45deg);
-    }
-
-    1.375% {
-        transform: rotate(67.5deg);
-    }
-
-    1.5% {
-        transform: rotate(90deg);
-    }
-
-    1.625% {
-        transform: rotate(-67.5deg);
-    }
-
-    1.75% {
-        transform: rotate(-45deg);
-    }
-
-    1.875% {
-        transform: rotate(-22.5deg);
-    }
-
-    2% {
-        content: "8";
-        transform: rotate(-0deg);
-    }
-
-    2.125% {
-        transform: rotate(22.5deg);
-    }
-
-    2.25% {
-        transform: rotate(45deg);
-    }
-
-    2.375% {
-        transform: rotate(67.5deg);
-    }
-
-    2.5% {
-        transform: rotate(90deg);
-    }
-
-    2.625% {
-        transform: rotate(-67.5deg);
-    }
-
-    2.75% {
-        transform: rotate(-45deg);
-    }
-
-    2.875% {
-        transform: rotate(-22.5deg);
-    }
-
-    3% {
-        content: "7";
-        transform: rotate(-0deg);
-    }
-
-    3.125% {
-        transform: rotate(22.5deg);
-    }
-
-    3.25% {
-        transform: rotate(45deg);
-    }
-
-    3.375% {
-        transform: rotate(67.5deg);
-    }
-
-    3.5% {
-        transform: rotate(90deg);
-    }
-
-    3.625% {
-        transform: rotate(-67.5deg);
-    }
-
-    3.75% {
-        transform: rotate(-45deg);
-    }
-
-    3.875% {
-        transform: rotate(-22.5deg);
-    }
-
-    4% {
-        content: "6";
-        transform: rotate(-0deg);
-    }
-
-    4.125% {
-        transform: rotate(22.5deg);
-    }
-
-    4.25% {
-        transform: rotate(45deg);
-    }
-
-    4.375% {
-        transform: rotate(67.5deg);
-    }
-
-    4.5% {
-        transform: rotate(90deg);
-    }
-
-    4.625% {
-        transform: rotate(-67.5deg);
-    }
-
-    4.75% {
-        transform: rotate(-45deg);
-    }
-
-    4.875% {
-        transform: rotate(-22.5deg);
-    }
-
-    5% {
-        content: "5";
-        transform: rotate(-0deg);
-    }
-
-    5.125% {
-        transform: rotate(22.5deg);
-    }
-
-    5.25% {
-        transform: rotate(45deg);
-    }
-
-    5.375% {
-        transform: rotate(67.5deg);
-    }
-
-    5.5% {
-        transform: rotate(90deg);
-    }
-
-    5.625% {
-        transform: rotate(-67.5deg);
-    }
-
-    5.75% {
-        transform: rotate(-45deg);
-    }
-
-    5.875% {
-        transform: rotate(-22.5deg);
-    }
-
-    6% {
-        content: "4";
-        transform: rotate(-0deg);
-    }
-
-    6.125% {
-        transform: rotate(22.5deg);
-    }
-
-    6.25% {
-        transform: rotate(45deg);
-    }
-
-    6.375% {
-        transform: rotate(67.5deg);
-    }
-
-    6.5% {
-        transform: rotate(90deg);
-    }
-
-    6.625% {
-        transform: rotate(-67.5deg);
-    }
-
-    6.75% {
-        transform: rotate(-45deg);
-    }
-
-    6.875% {
-        transform: rotate(-22.5deg);
-    }
-
-    7% {
-        content: "3";
-        transform: rotate(-0deg);
-    }
-
-    7.125% {
-        transform: rotate(22.5deg);
-    }
-
-    7.25% {
-        transform: rotate(45deg);
-    }
-
-    7.375% {
-        transform: rotate(67.5deg);
-    }
-
-    7.5% {
-        transform: rotate(90deg);
-    }
-
-    7.625% {
-        transform: rotate(-67.5deg);
-    }
-
-    7.75% {
-        transform: rotate(-45deg);
-    }
-
-    7.875% {
-        transform: rotate(-22.5deg);
-    }
-
-    8% {
-        content: "2";
-        transform: rotate(-6deg);
-    }
-
-    8.125% {
-        transform: rotate(22.5deg);
-    }
-
-    8.25% {
-        transform: rotate(45deg);
-    }
-
-    8.375% {
-        transform: rotate(67.5deg);
-    }
-
-    8.5% {
-        transform: rotate(90deg);
-    }
-
-    8.625% {
-        transform: rotate(-67.5deg);
-    }
-
-    8.75% {
-        transform: rotate(-45deg);
-    }
-
-    8.875% {
-        transform: rotate(-22.5deg);
-    }
-
-    9% {
-        content: "1";
-        transform: rotate(-0deg);
-    }
-
-    9.125% {
-        transform: rotate(22.5deg);
-    }
-
-    9.25% {
-        transform: rotate(45deg);
-    }
-
-    9.375% {
-        transform: rotate(67.5deg);
-    }
-
-    9.5% {
-        transform: rotate(90deg);
-    }
-
-    9.625% {
-        transform: rotate(-67.5deg);
-    }
-
-    9.75% {
-        transform: rotate(-45deg);
-    }
-
-    9.875% {
-        transform: rotate(-22.5deg);
-    }
-
     10% {
-        content: "Ich liebe CSS !!!";
-        transform: rotate(-0deg);
+        content: "8";
+        transform: rotate(36deg);
+        scale(0.5)
     }
+
+    20% {
+        content: "7";
+        transform: rotate(72deg);
+    }
+
+    30% {
+        content: "6";
+        transform: rotate(108deg);
+    }
+
+    40% {
+        content: "5";
+        transform: rotate(144deg);
+    }
+
+    50% {
+        content: "4";
+        transform: rotate(180deg);
+        opacity: 1;
+    }
+
+    60% {
+        content: "3";
+        transform: rotate(216deg);
+    }
+
+    70% {
+        content: "2";
+        transform: rotate(252deg);
+
+    }
+
+    80% {
+        content: "1";
+
+        transform: rotate(288deg);
+
+    }
+
+    90% {
+        content: "Ich liebe CSS !!!";
+        transform: rotate(324deg);
+    }
+
+
+    100% {
+        transform: rotate(-0deg);
+        /* opacity: 1; */
+    }
+}
