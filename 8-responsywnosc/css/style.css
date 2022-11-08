@@ -20,7 +20,7 @@ h2 {
 
 figure {
 	display: inline-block;
-	width: 33% ;
+	width: 33%;
 	margin: 0;
 	margin-bottom: 10px;
 }
@@ -29,7 +29,7 @@ figure figcaption {
 	text-align: center;
 }
 
-figure img{
+figure img {
 	width: 100%;
 	border: 2px solid #444;
 }
@@ -49,4 +49,5 @@ figure img{
 @media screen and (max-width: 480px) {
 	#gallery {
 		width: 100%;
-	}}
+	}
+}
