@@ -1,12 +1,23 @@
 .container {
-    width: 85vw;
-    height: 64vw;
-    position: relative;
+    width: 80vw;
+    height: 60vw;
+    /* position: relative; */
     background-color: grey;
     display: flex;
     align-items: center;
     justify-content: center;
+    border-radius: 3vw;
     overflow: hidden;
+    animation: wobble 1s step-end infinite;
+}
+
+.container::after {
+    content: "";
+    position: absolute;
+    width: 80vw;
+    height: 60vw;
+    border-radius: 3vw;
+    box-shadow: 0 0 0.2vw 0.2vw white inset;
 }
 
 .box-1 {
@@ -16,7 +27,6 @@
     left: 0;
     top: 0;
     background-color: rgb(155, 155, 155);
-    background: linear-gradient(37deg, rgba(255, 255, 255, 0.25) 50%, rgb(155, 155, 155)50%);
 }
 
 .box-2 {
@@ -28,14 +38,6 @@
     background-color: rgb(155, 155, 155);
 }
 
-.hand {
-    width: 2px;
-    height: 180%;
-    position: absolute;
-    background-color: rgba(116, 116, 116, 0.4);
-    animation: countdown 10s step-end infinite;
-}
-
 .hand-gradient {
     width: 180%;
     height: 180%;
@@ -45,55 +47,65 @@
 }
 
 .circle-small {
-    width: 75%;
-    height: 75%;
+    width: 39vw;
+    height: 39vw;
     border-radius: 50%;
     position: absolute;
     border: 0.6vw solid rgba(255, 255, 255, 0.4);
+
 }
 
 .circle-big {
-    width: 67.5%;
-    height: 90%;
+    width: 54vw;
+    height: 54vw;
     border-radius: 50%;
+    -khtml-border-radius: 50%;
     position: absolute;
     border: 0.6vw solid rgba(255, 255, 255, 0.4);
     display: flex;
     overflow: hidden;
     align-items: center;
     justify-content: center;
+    box-shadow: 0px 0px 1px rgb(120, 120, 120);
+
+}
+
+.scratches-1 {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    filter: blur(1px);
+    animation: scratches 4s step-end infinite;
 }
 
 .scratches-2 {
-    opacity: 0;
-}
-
-.scratches-3 {
-    opacity: 0;
-    animation: countdown 0.3s step-end infinite;
+    position: absolute;
+    filter: blur(1px);
+    animation: scratches 10s step-end infinite;
 }
 
 .frame-roll {
-    width: 180%;
-    height: 180%;
+    width: 100%;
+    height: 100%;
     position: absolute;
     background: radial-gradient(transparent,
-            rgba(132, 94, 61, 0.6));
-    opacity: 0;
-    animation: countdown 0.0417s step-end infinite;
+            rgba(132, 94, 61, .6));
+    animation: frameroll 0.04s step-end infinite;
 }
 
 .numbers {
     position: absolute;
-    font-size: 20vh;
+    font-size: 120px;
     color: white;
-    text-shadow: 0px 0px 3px rgb(120, 120, 120);
+    text-shadow: 0px 0px 2px rgb(120, 120, 120);
+    filter: blur(.3px);
 }
 
 .numbers::before {
     content: "";
     animation: countdown 10s step-end infinite;
 }
+
 
 @keyframes countdown {
     0% {
@@ -146,10 +158,75 @@
         content: "Ich liebe CSS !!!";
         transform: rotate(324deg);
     }
+}
 
+@keyframes wobble {
+    0% {
+        transform: translate(.02vw, .05vw);
+    }
 
-    100% {
-        transform: rotate(-0deg);
-        /* opacity: 1; */
+    10% {
+        transform: scale(.9995);
+        transform: rotate(.05deg);
+    }
+
+    20% {
+        transform: translate(-.05vw, 0vw);
+    }
+
+    35% {
+        transform: 0;
+        filter: blur(.1vw);
+    }
+
+    40% {
+        transform: scale(1.001);
+        filter: none;
+    }
+
+    70% {
+        transform: translate(.05vw, .05vw);
+    }
+
+    80% {
+        transform: rotate(-.1deg);
+    }
+
+    90% {
+        transform: none;
+    }
+}
+
+@keyframes scratches {
+    0% {
+        opacity: 0;
+    }
+
+    33% {
+        opacity: .1;
+    }
+
+    34% {
+        opacity: 0;
+    }
+
+    80% {
+        transform: rotate(170deg);
+        scale: 1.8;
+        opacity: .1;
+    }
+
+    81% {
+        opacity: 0;
+    }
+}
+
+@keyframes frameroll {
+    0% {
+        opacity: .4;
+    }
+
+    20% {
+        opacity: 0;
     }
 }
